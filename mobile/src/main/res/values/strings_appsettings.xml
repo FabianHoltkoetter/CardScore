@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Category names -->
+    <string name="settings_category_app">App Settings</string>
+    <string name="settings_category_skat">Skat Settings</string>
+    <string name="settings_category_doppelkopf">Doppelkopf Settings</string>
+
+    <!-- Settings Title -->
+    <string name="setting_theme_title">Theme</string>
+    <string name="setting_skat_color_title">Skat Color</string>
+    <string name="setting_doppelkopf_color_title">Doppelkopf Color</string>
+
+    <!-- Settings Description -->
+    <string name="setting_skat_color_description">Current Color:</string>
+    <string name="setting_doppelkopf_color_description">Current Color:</string>
+
+    <!-- Keys for SharedPrefs -->
+    <string name="setting_theme_key">theme</string>
+    <string name="setting_skat_color_key">skat_color</string>
+    <string name="setting_doppelkopf_color_key">doppelkopf_color</string>
+    <string name="key_newest_database_entry_game">newestDataEntry</string>
+    <string name="key_newest_database_entry_player">newestPlayerEntry</string>
+
+    <!-- Values for Preferences -->
+    <string-array name="setting_theme_options">
+        <item>Light</item>
+        <item>Dark</item>
+    </string-array>
+    <string name="setting_theme_default_value">light</string>
+    <string name="popup_positive_yes">Yes</string>
+    <string name="popup_negative_no">No</string>
+    <string-array name="setting_themes_values">
+        <item>light</item>
+        <item>dark</item>
+    </string-array>
+</resources>

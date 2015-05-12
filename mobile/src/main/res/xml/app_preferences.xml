@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="@string/settings_category_app">
+        <ListPreference
+            android:defaultValue="@string/setting_theme_default_value"
+            android:dialogTitle="@string/setting_theme_title"
+            android:entries="@array/setting_theme_options"
+            android:entryValues="@array/setting_themes_values"
+            android:key="@string/setting_theme_key"
+            android:title="@string/setting_theme_title" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/settings_category_skat">
+        <cardscore.fabianholtkoetter.de.cardscore.ColorPicker.ColorPickerPreference
+            android:defaultValue="@color/blue"
+            android:key="@string/setting_skat_color_key"
+            android:negativeButtonText="@null"
+            android:positiveButtonText="@null"
+            android:title="@string/setting_skat_color_title"
+            app:cal_itemLayout="@layout/calendar_grid_item_color"
+            app:cal_numColumns="5" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/settings_category_doppelkopf">
+        <cardscore.fabianholtkoetter.de.cardscore.ColorPicker.ColorPickerPreference
+            android:defaultValue="@color/green"
+            android:key="@string/setting_doppelkopf_color_key"
+            android:negativeButtonText="@null"
+            android:positiveButtonText="@null"
+            android:title="@string/setting_doppelkopf_color_title"
+            app:cal_itemLayout="@layout/calendar_grid_item_color"
+            app:cal_numColumns="5" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

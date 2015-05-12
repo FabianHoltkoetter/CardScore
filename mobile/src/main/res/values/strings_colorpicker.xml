@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="pink">#E91E63</string>
+    <string name="purple">#9C27B0</string>
+    <string name="deep_purple">#673AB7</string>
+    <string name="indigo">#3F51B5</string>
+    <string name="blue">#2196F3</string>
+    <string name="light_blue">#03A9F4</string>
+    <string name="cyan">#00BCD4</string>
+    <string name="teal">#009688</string>
+    <string name="green">#4CAF50</string>
+    <string name="light_green">#8BC34A</string>
+    <string name="lime">#CDDC39</string>
+    <string name="yellow">#FFEB3B</string>
+    <string name="amber">#FFC107</string>
+    <string name="orange">#FF9800</string>
+    <string name="deep_orange">#FF5722</string>
+    <string name="brown">#795548</string>
+    <string name="grey">#9E9E9E</string>
+    <string name="blue_grey">#78909C</string>
+    <string name="color_picker_default_title">Choose Color</string>
+    <!-- Content description for a color square. -->
+    <string name="color_swatch_description">Color <xliff:g id="color_index" example="14">%1$d</xliff:g></string>
+    <!-- Content description for a selected color square. -->
+    <string name="color_swatch_description_selected">Color <xliff:g id="color_index" example="14">%1$d</xliff:g> selected</string>
+    <!-- About -->
+    <string name="title_about">About</string>
+    <string name="about_ok">OK</string>
+    <string name="about_body"><![CDATA[
+        <b>Colorpickercollection Library & Demo</b><br>
+        Version %s<br><br>
+        <a href="https://github.com/gabrielemariotti/colorpickercollection">Source</a><br><br>
+        <a href="https://plus.google.com/114432517923423045208">By Gabriele Mariotti</a><br><br>
+
+    ]]></string>
+</resources>

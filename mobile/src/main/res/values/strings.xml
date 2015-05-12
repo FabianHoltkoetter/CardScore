@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Card Score</string>
+    <string name="action_settings">Settings</string>
+    <string name="dashboard_fab_option_skat">Skat</string>
+    <string name="dashboard_fab_option_doppelkopf">Doppelkopf</string>
+    <string name="popup_info_title">Info</string>
+    <string name="popup_info_restart_text">You need to restart the App for the changes to take effect.\nWould you like to restart now?</string>
+    <string name="dashboard_no_games">No Games</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="hello_world">Hello world!</string>
+
+</resources>
