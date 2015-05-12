@@ -9,6 +9,7 @@ package cardscore.fabianholtkoetter.de.cardscore.ColorPicker;
         import android.graphics.drawable.Drawable;
         import android.graphics.drawable.GradientDrawable;
         import android.preference.Preference;
+        import android.support.annotation.NonNull;
         import android.util.AttributeSet;
         import android.util.TypedValue;
         import android.view.View;
@@ -27,7 +28,7 @@ public class ColorPickerPreference extends Preference{
 
     private int[] mColorChoices = {};
     private int mValue = 0;
-    private int mItemLayoutId = R.layout.calendar_grid_item_color;
+    private int mItemLayoutId = R.layout.color_picker_grid_item_color;
     private int mNumColumns = 5;
     private View mPreviewView;
 
@@ -70,9 +71,9 @@ public class ColorPickerPreference extends Preference{
     }
 
     @Override
-    protected void onBindView(View view) {
+    protected void onBindView(@NonNull View view) {
         super.onBindView(view);
-        mPreviewView = view.findViewById(R.id.calendar_color_view);
+        mPreviewView = view.findViewById(R.id.color_picker_color_view);
         setColorViewValue(mPreviewView, mValue);
     }
 
@@ -88,7 +89,7 @@ public class ColorPickerPreference extends Preference{
     protected void onClick() {
         super.onClick();
 
-        ColorPickerDialog colorcalendar = (ColorPickerDialog) ColorPickerDialog.newInstance(R.string.color_picker_default_title,
+        ColorPickerDialog colorcalendar = ColorPickerDialog.newInstance(R.string.color_picker_default_title,
                 mColorChoices, getValue(), mNumColumns, Utils.isTablet(getContext())? ColorPickerDialog.SIZE_LARGE : ColorPickerDialog.SIZE_SMALL);
 
         //colorcalendar.setPreference(this);

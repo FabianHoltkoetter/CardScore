@@ -12,8 +12,15 @@ import android.preference.PreferenceManager;
 
 import cardscore.fabianholtkoetter.de.cardscore.R;
 
-/**
- * Created by Fabian on 26.01.2015.
+/**.
+ * Organization: Weisswurst Systems
+ * Project: CardScore
+ * Author(s): Fabian Holtkoetter
+ * Date: 26.01.2015
+ * OS: Windows 8.1
+ * Java-Version: 1.8
+ * Processor: Intel Core i5-4300 CPU @ 1.9GHz
+ * RAM: 4GB
  */
 public class SettingsActivity extends PreferenceActivity {
 
@@ -30,8 +37,9 @@ public class SettingsActivity extends PreferenceActivity {
         super.onCreate(savedInstanceState);
         mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         PreferenceManager.setDefaultValues(getBaseContext(), R.xml.app_preferences, false);
+        //noinspection deprecation
         addPreferencesFromResource(R.xml.app_preferences);
-
+        //noinspection deprecation
         listPreference = (ListPreference) findPreference(getString(R.string.setting_theme_key));
         listPreference.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
 
@@ -45,7 +53,7 @@ public class SettingsActivity extends PreferenceActivity {
                         .setPositiveButton(getString(R.string.popup_positive_yes), new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                Intent i = new Intent(SettingsActivity.this, MainActivity.class);
+                                Intent i = new Intent(SettingsActivity.this, DashboardActivity.class);
                                 startActivity(i);
                                 System.exit(0);
                             }

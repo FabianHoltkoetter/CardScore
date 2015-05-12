@@ -1,7 +1,6 @@
 package cardscore.fabianholtkoetter.de.cardscore.Activities;
 
 import android.content.SharedPreferences;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
@@ -23,7 +22,6 @@ import cardscore.fabianholtkoetter.de.cardscore.Exceptions.InvalidGameTypeExcept
 import cardscore.fabianholtkoetter.de.cardscore.Model.Game;
 import cardscore.fabianholtkoetter.de.cardscore.Model.Player;
 import cardscore.fabianholtkoetter.de.cardscore.R;
-import cardscore.fabianholtkoetter.de.cardscore.Util.CardScoreStorage;
 import cardscore.fabianholtkoetter.de.cardscore.Util.GameCardViewAdapter;
 
 
@@ -38,10 +36,9 @@ public class GameListFragment extends Fragment {
 
     public GameListFragment(){}
 
-    public static final GameListFragment newInstance(int title, String message)
+    public static GameListFragment newInstance()
     {
-        GameListFragment fragment = new GameListFragment();
-        return fragment;
+        return new GameListFragment();
     }
 
 
@@ -50,10 +47,10 @@ public class GameListFragment extends Fragment {
                                 Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_gamelist, container, false);
 
-        mCardList = (RecyclerView) v.findViewById(R.id.cardListGames);
-        mActionSkat = (FloatingActionButton) v.findViewById(R.id.games_fab_action_skat);
-        mActionDoppelkopf = (FloatingActionButton) v.findViewById(R.id.games_fab_action_doppelkopf);
-        mTextViewNoGames = (TextView) v.findViewById(R.id.noGamesTextView);
+        mCardList = (RecyclerView) v.findViewById(R.id.fragment_dashgames_recycler_cardListGames);
+        mActionSkat = (FloatingActionButton) v.findViewById(R.id.fragment_dashgames_fab_playSkat);
+        mActionDoppelkopf = (FloatingActionButton) v.findViewById(R.id.fragment_dashgames_fab_playDoppelkopf);
+        mTextViewNoGames = (TextView) v.findViewById(R.id.fragment_dashgames_textview_noGames);
 
         PreferenceManager.setDefaultValues(getActivity(), R.xml.app_preferences, false);
         userPrefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
@@ -95,7 +92,7 @@ public class GameListFragment extends Fragment {
     }
 
     public List<Game> createTestData(){
-        List<Player> players = new ArrayList<Player>();
+        List<Player> players = new ArrayList<>();
         Player p1 = new Player(getActivity().getResources().getColor(R.color.blue), "Hans", 0, 0, 0);
         Player p2 = new Player(getActivity().getResources().getColor(R.color.green), "Peter", 0, 0, 1);
         Player p3 = new Player(getActivity().getResources().getColor(R.color.yellow), "Mark", 0, 0, 2);
@@ -103,7 +100,7 @@ public class GameListFragment extends Fragment {
         players.add(p2);
         players.add(p3);
         try {
-            List<Integer> points = new ArrayList<Integer>();
+            List<Integer> points = new ArrayList<>();
             points.add(120);
             points.add(20);
             points.add(-10);
@@ -113,7 +110,7 @@ public class GameListFragment extends Fragment {
             g2.setPoints(points);
             Game g3 = new Game("Game Drei", players, Game.SKAT_GAME, 2);
             g3.setPoints(points);
-            List<Game> games = new ArrayList<Game>();
+            List<Game> games = new ArrayList<>();
             games.add(g1);
             games.add(g2);
             games.add(g3);
@@ -125,7 +122,7 @@ public class GameListFragment extends Fragment {
     }
 
     public void toggleVisibility() {
-        if (games.size() > 0) {
+        if (games != null && games.size() > 0) {
             mCardList.setAdapter(new GameCardViewAdapter(getActivity(), games));
             mCardList.setItemAnimator(new DefaultItemAnimator());
         } else {

@@ -8,7 +8,8 @@
     <string name="popup_info_title">Info</string>
     <string name="popup_info_restart_text">You need to restart the App for the changes to take effect.\nWould you like to restart now?</string>
     <string name="dashboard_no_games">No Games</string>
-    <string name="title_activity_main">MainActivity</string>
+    <string name="dashboard_no_players">No Players</string>
+    <string name="title_activity_dashboard">Dashboard</string>
     <string name="title_section1">Section 1</string>
     <string name="title_section2">Section 2</string>
     <string name="title_section3">Section 3</string>

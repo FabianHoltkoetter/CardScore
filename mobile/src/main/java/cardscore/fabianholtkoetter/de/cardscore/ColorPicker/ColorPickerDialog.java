@@ -24,6 +24,7 @@ package cardscore.fabianholtkoetter.de.cardscore.ColorPicker;
         import android.app.Dialog;
         import android.app.DialogFragment;
         import android.os.Bundle;
+        import android.support.annotation.NonNull;
         import android.view.LayoutInflater;
         import android.view.View;
         import android.widget.ProgressBar;
@@ -107,7 +108,7 @@ public class ColorPickerDialog extends DialogFragment implements ColorPickerSwat
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         final Activity activity = getActivity();
 
-        View view = LayoutInflater.from(getActivity()).inflate(R.layout.calendar_color_picker_dialog, null);
+        View view = LayoutInflater.from(getActivity()).inflate(R.layout.color_picker_dialog, null);
         mProgress = (ProgressBar) view.findViewById(android.R.id.progress);
         mPalette = (ColorPickerPalette) view.findViewById(R.id.color_picker);
         mPalette.init(mSize, mColumns, this);
@@ -197,7 +198,7 @@ public class ColorPickerDialog extends DialogFragment implements ColorPickerSwat
     }
 
     @Override
-    public void onSaveInstanceState(Bundle outState) {
+    public void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
         outState.putIntArray(KEY_COLORS, mColors);
         outState.putSerializable(KEY_SELECTED_COLOR, mSelectedColor);

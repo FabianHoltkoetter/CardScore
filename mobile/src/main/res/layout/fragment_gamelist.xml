@@ -7,7 +7,7 @@
     tools:context="cardscore.fabianholtkoetter.de.cardscore.Activities.GameListFragment">
 
     <TextView
-        android:id="@+id/noGamesTextView"
+        android:id="@+id/fragment_dashgames_textview_noGames"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
@@ -16,7 +16,7 @@
         android:visibility="gone" />
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/cardListGames"
+        android:id="@+id/fragment_dashgames_recycler_cardListGames"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
@@ -30,13 +30,13 @@
         android:layout_marginBottom="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        fab:fab_addButtonColorNormal="@color/accent_color"
+        fab:fab_addButtonColorNormal="@color/accent"
         fab:fab_addButtonColorPressed="@color/primary"
         fab:fab_addButtonPlusIconColor="@color/white"
         fab:fab_labelStyle="@style/menu_labels_style">
 
         <com.getbase.floatingactionbutton.FloatingActionButton
-            android:id="@+id/games_fab_action_skat"
+            android:id="@+id/fragment_dashgames_fab_playSkat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             fab:fab_colorNormal="@color/white"
@@ -45,7 +45,7 @@
             fab:fab_title="@string/dashboard_fab_option_skat" />
 
         <com.getbase.floatingactionbutton.FloatingActionButton
-            android:id="@+id/games_fab_action_doppelkopf"
+            android:id="@+id/fragment_dashgames_fab_playDoppelkopf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             fab:fab_colorNormal="@color/white"
